@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Tracker - Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="login-page">
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <div class="icon-wrapper">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h1>Attendance Tracker</h1>
+                <p>Track your classes, never miss the minimum!</p>
+            </div>
+            
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label for="studentName">
+                        <i class="fas fa-user"></i>
+                        Your Name
+                    </label>
+                    <input type="text" id="studentName" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="collegeName">
+                        <i class="fas fa-university"></i>
+                        College Name
+                    </label>
+                    <input type="text" id="collegeName" placeholder="Enter college name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="branch">
+                        <i class="fas fa-code-branch"></i>
+                        Branch
+                    </label>
+                    <input type="text" id="branch" placeholder="e.g., Computer Science" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="semester">
+                        <i class="fas fa-calendar-alt"></i>
+                        Semester
+                    </label>
+                    <select id="semester" required>
+                        <option value="">Select Semester</option>
+                        <option value="1">1st Semester</option>
+                        <option value="2">2nd Semester</option>
+                        <option value="3">3rd Semester</option>
+                        <option value="4">4th Semester</option>
+                        <option value="5">5th Semester</option>
+                        <option value="6">6th Semester</option>
+                        <option value="7">7th Semester</option>
+                        <option value="8">8th Semester</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="login-btn">
+                    Get Started
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+
+            <div class="disclaimer">
+                <i class="fas fa-info-circle"></i>
+                For personal tracking only. Not official college data.
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

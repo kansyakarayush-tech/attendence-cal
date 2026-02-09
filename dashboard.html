@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Tracker - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dashboard-page">
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="nav-left">
+                <i class="fas fa-graduation-cap"></i>
+                <span class="nav-title">Attendance Tracker</span>
+            </div>
+            <button id="logoutBtn" class="logout-btn">
+                <i class="fas fa-sign-out-alt"></i>
+                Logout
+            </button>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <div class="welcome-section">
+            <h2>Hey, <span id="displayName"></span>! 👋</h2>
+            <p><span id="displaySemester"></span> • <span id="displayBranch"></span></p>
+        </div>
+
+        <button class="add-subject-btn" id="addSubjectBtn">
+            <i class="fas fa-plus"></i>
+            Add Subject
+        </button>
+
+        <div id="subjectsContainer" class="subjects-container"></div>
+
+        <div class="empty-state" id="emptyState">
+            <i class="fas fa-book-open"></i>
+            <h3>No subjects yet</h3>
+            <p>Add your first subject to start tracking!</p>
+        </div>
+    </div>
+
+    <div class="modal" id="subjectModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Add Subject</h3>
+                <button class="close-btn" id="closeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form id="subjectForm">
+                <input type="hidden" id="subjectId">
+                <div class="form-group">
+                    <label for="subjectName">Subject Name</label>
+                    <input type="text" id="subjectName" placeholder="e.g., Data Structures" required>
+                </div>
+                <div class="form-group">
+                    <label for="totalClasses">Total Classes</label>
+                    <input type="number" id="totalClasses" placeholder="0" min="0" required>
+                </div>
+                <div class="form-group">
+                    <label for="attendedClasses">Classes Attended</label>
+                    <input type="number" id="attendedClasses" placeholder="0" min="0" required>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-secondary" id="cancelBtn">Cancel</button>
+                    <button type="submit" class="btn-primary" id="saveBtn">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
